@@ -1,6 +1,12 @@
+import logging
+
 def quick_sort(arr):
-    quick_sort_helper(arr, 0, len(arr)-1)
-    return arr
+    try:
+        quick_sort_helper(arr, 0, len(arr)-1)
+        return arr
+    except Exception as e:
+        logging.exception("An error occurred during quick sort: %s", e)
+        return []
 
 def quick_sort_helper(arr, low, high):
     if low < high:
