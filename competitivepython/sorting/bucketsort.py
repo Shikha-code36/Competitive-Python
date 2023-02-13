@@ -21,4 +21,4 @@ def bucket_sort(arr):
         return result
     except Exception as e:
         logging.exception("An error occurred during bucket sort: %s", e)
-        return []
+        return "An error occurred during bucket sort: {}".format(str(e))

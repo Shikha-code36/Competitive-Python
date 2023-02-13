@@ -40,5 +40,5 @@ def tim_sort(arr):
         return arr
     except Exception as e:
         logging.exception("An error occurred during bucket sort: %s", e)
-        return []
+        return "An error occurred during tim sort: {}".format(str(e))
 

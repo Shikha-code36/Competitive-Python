@@ -10,5 +10,5 @@ def bubble_sort(arr):
         return arr
     except Exception as e:
         logging.exception("An error occurred during bubble sort: %s", e)
-        return []
+        return "An error occurred during bubble sort: {}".format(str(e))
 

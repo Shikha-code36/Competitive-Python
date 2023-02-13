@@ -6,7 +6,7 @@ def quick_sort(arr):
         return arr
     except Exception as e:
         logging.exception("An error occurred during quick sort: %s", e)
-        return []
+        return "An error occurred during quick sort: {}".format(str(e))
 
 def quick_sort_helper(arr, low, high):
     if low < high:

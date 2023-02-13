@@ -31,5 +31,5 @@ def merge_sort(arr):
         return arr
     except Exception as e:
         logging.exception("An error occurred during merge sort: %s", e)
-        return []
+        return "An error occurred during merge sort: {}".format(str(e))
 

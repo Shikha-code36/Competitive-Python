@@ -16,5 +16,5 @@ def shell_sort(arr):
         return arr
     except Exception as e:
         logging.exception("An error occurred during shell sort: %s", e)
-        return []
+        return "An error occurred during shell sort: {}".format(str(e))
 

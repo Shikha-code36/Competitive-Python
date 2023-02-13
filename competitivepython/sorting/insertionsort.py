@@ -13,5 +13,4 @@ def insertion_sort(arr):
         return arr
     except Exception as e:
         logging.exception("An error occurred during insertion sort: %s", e)
-        return []
-
+        return "An error occurred during insertion sort: {}".format(str(e))

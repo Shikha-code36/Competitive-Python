@@ -12,5 +12,5 @@ def radix_sort(arr):
         return arr
     except Exception as e:
         logging.exception("An error occurred during radix sort: %s", e)
-        return []
+        return "An error occurred during radix sort: {}".format(str(e))
 

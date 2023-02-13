@@ -11,7 +11,7 @@ def heap_sort(arr):
         return arr
     except Exception as e:
         logging.exception("An error occurred during heap sort: %s", e)
-        return []
+        return "An error occurred during heap sort: {}".format(str(e))
 
 
 def heapify(arr, n, i):
