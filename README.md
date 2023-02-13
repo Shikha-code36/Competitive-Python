@@ -121,8 +121,8 @@ To use PyPy in your project, simply import the desired algorithm or data structu
 
 ## Contributing
 
-If you would like to contribute to the PyPy project, please refer to the contributing guidelines. We welcome contributions of all types, including bug reports, feature requests, and code contributions.
+If you would like to contribute to the competitivepython project, please refer to the contributing guidelines. We welcome contributions of all types, including bug reports, feature requests, and code contributions.
 
 ## License
 
-PyPy is open source software released under the MIT license. Refer to the LICENSE file for more information.
+competitivepython is open source software released under the MIT license. Refer to the LICENSE file for more information.
