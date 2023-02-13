@@ -36,7 +36,7 @@ def kmp_search(pat, txt):
         return indices
     except Exception as e:
         logging.exception("An error occurred during KMP search: %s", e)
-        return []
+        return "An error occurred during Knuth Morris Pratt search: {}".format(str(e))
 
 def computeLPSArray(pat, M, lps):
     len = 0  # length of the previous longest prefix suffix

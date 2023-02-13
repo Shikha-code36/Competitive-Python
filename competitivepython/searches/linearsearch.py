@@ -8,5 +8,5 @@ def linear_search(arr, target):
         return -1
     except Exception as e:
         logging.exception("An error occurred during binary search: %s", e)
-        return -1
+        return "An error occurred during linear search: {}".format(str(e))
 
