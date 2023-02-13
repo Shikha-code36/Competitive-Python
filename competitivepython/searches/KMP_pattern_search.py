@@ -1,3 +1,5 @@
+import logging
+
 def kmp_search(pat, txt):
     M = len(pat)
     N = len(txt)
@@ -7,30 +9,34 @@ def kmp_search(pat, txt):
     lps = [0] * M
     j = 0  # index for pat[]
 
-    # Preprocess the pattern (calculate lps[] array)
-    computeLPSArray(pat, M, lps)
+    try:
+        # Preprocess the pattern (calculate lps[] array)
+        computeLPSArray(pat, M, lps)
 
-    i = 0  # index for txt[]
-    indices = []
-    while i < N:
-        if pat[j] == txt[i]:
-            i += 1
-            j += 1
-
-        if j == M:
-            indices.append(i - j)
-            j = lps[j - 1]
-
-        # mismatch after j matches
-        elif i < N and pat[j] != txt[i]:
-            # Do not match lps[0..lps[j-1]] characters,
-            # they will match anyway
-            if j != 0:
-                j = lps[j - 1]
-            else:
+        i = 0  # index for txt[]
+        indices = []
+        while i < N:
+            if pat[j] == txt[i]:
                 i += 1
+                j += 1
 
-    return indices
+            if j == M:
+                indices.append(i - j)
+                j = lps[j - 1]
+
+            # mismatch after j matches
+            elif i < N and pat[j] != txt[i]:
+                # Do not match lps[0..lps[j-1]] characters,
+                # they will match anyway
+                if j != 0:
+                    j = lps[j - 1]
+                else:
+                    i += 1
+
+        return indices
+    except Exception as e:
+        logging.exception("An error occurred during KMP search: %s", e)
+        return []
 
 def computeLPSArray(pat, M, lps):
     len = 0  # length of the previous longest prefix suffix
@@ -55,5 +61,3 @@ def computeLPSArray(pat, M, lps):
             else:
                 lps[i] = 0
                 i += 1
-
-
