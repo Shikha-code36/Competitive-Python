@@ -13,7 +13,7 @@ setup(
     long_description=long_description,
     url='https://github.com/Shikha-code36/competitivepython',
     packages=find_packages(),
-    install_requires=['logging', 'heapq'],
+    install_requires=[],
     keywords=['competitive programming algorithm', 'python', 'data-structures', 'algorithms',
               'searching-algorithm', 'sorting-algorithm', 'graphs', 'binary-search tree'],
     license='MIT',
