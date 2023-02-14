@@ -1,16 +1,15 @@
 # Competitive Programming Algorithm Library in Python
 
-competitivepython is a library of algorithms and data structures implemented in Python. It is designed to be a useful resource for developers who need to implement common algorithms and data structures in their projects.
+competitivepython is an open-source library of algorithms and data structures implemented in Python. It offers a collection of frequently used algorithms and data structures that can be directly used in any Python-based project.
 
 ## Features
 
-- Implements a wide range of algorithms and data structures, including:
+- Provides implementations for several common algorithms and data structures such as:
   - Searches: Binary Search, Linear Search, KMP Pattern Search
   - Graphs: BFS, DFS, Dijkstra
   - Sorting: Bubble Sort, Insertion Sort, Shell Sort, Selection Sort, Bucket Sort, Merge Sort, Tim Sort, Quick Sort, Heap Sort, Radix Sort
   - Trees: Binary Search Tree
-- Easy to use and understand, with well-documented code
-- Portable and compatible with Python 3
+- Codebase is easy to use, well-documented, and compatible with Python 3.
 - Open source and available under the MIT license
 
 ## Installation
@@ -23,78 +22,259 @@ To install competitivepython library, simply run the following command:
 
 ## Usage
 
-To use PyPy in your project, simply import the desired algorithm or data structure and use it as needed. For example:
+To use competitivepython in your project, import the desired algorithm or data structure and use it as needed. Below are some example use cases:
 
-- searches implementation example
+- Implementing searches:
+  - Binary Search
     ```
     from competitivepython import searches
-
-    result = searches.binary_search([1, 2, 3, 4, 5], 3)
-    result2 = searches.linear_search([5, 7, 9, 2, 4, 10], 4)
+    
+    arr = [1, 2, 3, 4, 5]
+    target = 3
+    
+    result = searches.binary_search(arr, target)
+  
+    print("Binary Search:",result)  
+    
+    '''Output: 
+    Binary Search: 2
+    '''
+    ```
+  - Linear Search
+    ```
+    from competitivepython import searches
+    
+    arr = [5, 7, 9, 2, 4, 10]
+    target = 4
+    
+    result = searches.linear_search(arr, target)
+    
+    print("Linear Search:",result)  
+    
+    '''Output: 
+    Linear Search: 4
+    '''
+    ```
+  - Knuth–Morris–Pratt string Search
+    ```
+    from competitivepython import searches
+    
     txt = "ABABDABACDABABCABAB"
     pat = "ABABCABAB"
-    result3 = searches.kmp_search(pat,txt)
-    print(result)  # Output: 2
-    print(result2)  # Output: 4
-    print(result3) # Output: [10]
+    
+    result = searches.kmp_search(pat,txt)
+    
+    print("KMP Search:",result) 
+    
+    '''Output: 
+    KMP Search: [10]
+    '''
     ```
+    
+- Implementing sorting:
+  - Bubble Sort
+    ```
+      from competitivepython import sorting
 
-- sorting implementation example
+      arr = [112, 6, 7, 12, 15]
+
+      result = sorting.bubble_sort(arr)
+      print('bubble sort:', result)
+
+      ''' Output --- 
+       bubble sort: [6, 7, 12, 15, 112] 
+      '''
+      ```
+   - Bucket Sort
+      ```
+      from competitivepython import sorting
+
+      arr = [112, 6, 7, 12, 15]
+
+      result = sorting.bucket_sort(arr)
+      print('bucket sort:', result)
+
+      ''' Output --- 
+       bucket sort: [6, 7, 12, 15, 112]
+      '''
+      ```
+  - Heap Sort
+    ```
+    from competitivepython import sorting
+
+    arr = [112, 6, 7, 12, 15]
+    
+    result = sorting.heap_sort(arr)
+    
+    print('heap sort:', result)
+
+    ''' Output --- 
+     heap sort: [6, 7, 12, 15, 112] 
+    '''
+    ```
+  - Insertion Sort
     ```
     from competitivepython import sorting
 
     arr = [112, 6, 7, 12, 15]
 
-    res = sorting.bubble_sort(arr)
-    res1 = sorting.bucket_sort(arr)
-    res2 = sorting.heap_sort(arr)
-    res3 = sorting.insertion_sort(arr)
-    res4 = sorting.merge_sort(arr)
-    res5 = sorting.quick_sort(arr)
-    res6 = sorting.radix_sort(arr)
-    res7 = sorting.selection_sort(arr)
-    res8 = sorting.shell_sort(arr)
-    res9 = sorting.tim_sort(arr)
+    result = sorting.insertion_sort(arr)
+    
+    print('insertion sort:', result)
 
-    print('bubble sort:', res, 'bucket sort:', res1, 'heap sort:', res2, 'insertion sort:', res3, 'merge sort:', res4,
-        'quick sort:', res5, 'radix sort:', res6, 'selection sort:', res7, 'shell sort:', res8, 'tim sort:', res9)
+    ''' Output ---  
+    insertion sort: [6, 7, 12, 15, 112] 
+    '''
+    ```
+  - Merge Sort
+    ```
+    from competitivepython import sorting
+
+    arr = [112, 6, 7, 12, 15]
+
+    result = sorting.merge_sort(arr)
+    
+    print('merge sort:', result)
 
     ''' Output --- 
-     bubble sort: [6, 7, 12, 15, 112] bucket sort: [6, 7, 12, 15, 112] heap sort: [6, 7, 12, 15, 112] 
-    insertion sort: [6, 7, 12, 15, 112] merge sort: [6, 7, 12, 15, 112] quick sort: [6, 7, 12, 15, 112] 
-    radix sort: [6, 7, 12, # 15, 112] selection sort: [6, 7, 12, 15, 112] shell sort: [6, 7, 12, 15, 112] 
+     merge sort: [6, 7, 12, 15, 112] 
+    '''
+    ```
+  - Quick Sort
+    ```
+    from competitivepython import sorting
+
+    arr = [112, 6, 7, 12, 15]
+
+    result = sorting.quick_sort(arr)
+    
+    print('quick sort:', result)
+
+    ''' Output --- 
+     quick sort: [6, 7, 12, 15, 112] 
+    '''
+    ```
+  - Radix Sort
+    ```
+    from competitivepython import sorting
+
+    arr = [112, 6, 7, 12, 15]
+
+    result = sorting.radix_sort(arr)
+    
+    print('radix sort:', result)
+
+    ''' Output --- 
+    radix sort: [6, 7, 12, # 15, 112]
+    '''
+    ```
+  - Selection Sort
+    ```
+    from competitivepython import sorting
+
+    arr = [112, 6, 7, 12, 15]
+    
+    result = sorting.selection_sort(arr)
+    
+    print('selection sort:', result)
+
+    ''' Output --- 
+    selection sort: [6, 7, 12, 15, 112]
+    '''
+    ```
+  - Shell Sort
+    ```
+    from competitivepython import sorting
+
+    arr = [112, 6, 7, 12, 15]
+
+    result = sorting.shell_sort(arr)
+
+    print('shell sort:', result)
+
+    ''' Output --- 
+     shell sort: [6, 7, 12, 15, 112] 
+    '''
+    ```
+  - Tim Sort
+    ```
+    from competitivepython import sorting
+
+    arr = [112, 6, 7, 12, 15]
+
+    result = sorting.tim_sort(arr)
+
+    print('tim sort:', result)
+
+    ''' Output --- 
     tim sort: [6, 7, 12, 15, 112]
     '''
     ```
+  
+-  Implementing graphs:
+    - Breadth First Search (or Breadth First Traversal)
+      ```
+      from competitivepython import graphs
 
--  graphs implementation example
-    ```
-    from competitivepython import graphs
+      graph = {
+          'A': {'B': 1, 'C': 4},
+          'B': {'A': 1, 'C': 2, 'D': 5},
+          'C': {'A': 4, 'B': 2, 'D': 1},
+          'D': {'B': 5, 'C': 1},
+      }
+      start = 'A'
+      end = 'D'
 
-    graph = {
-        'A': {'B': 1, 'C': 4},
-        'B': {'A': 1, 'C': 2, 'D': 5},
-        'C': {'A': 4, 'B': 2, 'D': 1},
-        'D': {'B': 5, 'C': 1},
-    }
-    start = 'A'
-    end = 'D'
+      result = graphs.breadth_first_search(graph, 'C')
 
-    result = graphs.breadth_first_search(graph, 'C')
-    result2 = graphs.depth_first_search(graph, 'C')
-    result3 = graphs.dijkstra(graph, start, end)
-    print("bfs:",result)
-    print("dfs:",result2)
-    print("dijikstra:",result3)
+      print("bfs:",result)
 
-    ''' Output--
-        bfs: {'B', 'D', 'C', 'A'}
-        dfs: {'B', 'D', 'C', 'A'}
-        dijikstra: {'distance': 4, 'path': ['B', 'C', 'D']}
-    '''
-    ```
+      ''' Output--
+          bfs: {'B', 'D', 'C', 'A'}
+      '''
+      ```
+    - Depth First Search(or Depth First Traversal)
+      ```
+      from competitivepython import graphs
 
-- trees implementation example
+      graph = {
+          'A': {'B': 1, 'C': 4},
+          'B': {'A': 1, 'C': 2, 'D': 5},
+          'C': {'A': 4, 'B': 2, 'D': 1},
+          'D': {'B': 5, 'C': 1},
+      }
+      start = 'A'
+      end = 'D'
+
+      result = graphs.depth_first_search(graph, 'C')
+      print("dfs:",result)
+
+      ''' Output--
+          dfs: {'B', 'D', 'C', 'A'}
+      '''
+      ```
+    - Dijkstra’s Shortest Path
+      ```
+      from competitivepython import graphs
+
+      graph = {
+          'A': {'B': 1, 'C': 4},
+          'B': {'A': 1, 'C': 2, 'D': 5},
+          'C': {'A': 4, 'B': 2, 'D': 1},
+          'D': {'B': 5, 'C': 1},
+      }
+      start = 'A'
+      end = 'D'
+
+      result = graphs.dijkstra(graph, start, end)
+      print("dijikstra:",result)
+
+      ''' Output--
+         dijikstra: {'distance': 4, 'path': ['B', 'C', 'D']}
+      '''
+      ```
+
+- Implementing trees:
 
     ```
     from competitivepython import trees
