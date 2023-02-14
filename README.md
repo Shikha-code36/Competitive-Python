@@ -121,7 +121,7 @@ To use PyPy in your project, simply import the desired algorithm or data structu
 
 ## Contributing
 
-If you would like to contribute to the competitivepython project, please refer to the contributing guidelines. We welcome contributions of all types, including bug reports, feature requests, and code contributions.
+If you would like to contribute to the competitivepython project, please refer to the contributing guidelines in CONTRIBUTING.md. We welcome contributions of all types, including bug reports, feature requests, and code contributions.
 
 ## License
 
