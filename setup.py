@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setup(
     name='competitivepython',
-    version='0.0.1',
+    version='0.1.0',
     description='A collection of algorithms for competitive programming',
     author='Shikha Pandey',
     author_email='shikha.py36@gmail.com',
     long_description_content_type="text/markdown",
     long_description=long_description,
-    url='https://github.com/Shikha-code36/competitivepython',
+    url='https://github.com/Shikha-code36/Competitive-Python',
     packages=find_packages(),
     install_requires=[],
     keywords=['competitive programming algorithm', 'python', 'data-structures', 'algorithms',
