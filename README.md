@@ -1,7 +1,7 @@
 # Competitive Programming Algorithm Library in Python
 
 competitivepython is an open-source library of algorithms and data structures implemented in Python. It offers a collection of frequently used algorithms and data structures that can be directly used in any Python-based project.
-Checkout the blog regarding this library ![Click Here](https://pandeyshikha075.medium.com/an-overview-of-competitivepython-a-python-library-for-implementing-algorithms-and-data-structures-3a5776e13535)
+Checkout the blog regarding this library [Click Here](https://pandeyshikha075.medium.com/an-overview-of-competitivepython-a-python-library-for-implementing-algorithms-and-data-structures-3a5776e13535)
 
 ## Features
 
